@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "HYF0218C07000379",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 11268,
+        "processId": 25087,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,61 +11,43 @@
         {
             "deviceId": "HYF0218C07000379",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 32426,
-            "exited": false
-        },
-        {
-            "deviceId": "HYF0218C07000379",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 2415,
-            "exited": false
-        },
-        {
-            "deviceId": "HYF0218C07000379",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 4199,
-            "exited": false
-        },
-        {
-            "deviceId": "HYF0218C07000379",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 6175,
-            "exited": false
-        },
-        {
-            "deviceId": "HYF0218C07000379",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 13721,
-            "exited": false
-        },
-        {
-            "deviceId": "HYF0218C07000379",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 16018,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "HYF0218C07000379",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 30211,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "HYF0218C07000379",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 4430,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "HYF0218C07000379",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 7093,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "HYF0218C07000379",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 11268,
+            "exited": true
+        },
+        {
+            "deviceId": "HYF0218C07000379",
+            "name": "com.huawei.android.launcher",
+            "processId": 2903,
+            "exited": false
+        },
+        {
+            "deviceId": "HYF0218C07000379",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 25087,
             "exited": false
         }
     ],

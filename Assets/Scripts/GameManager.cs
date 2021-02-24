@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform leftPivot, rightPivot, centerPivot;
 
-    private float moveDuration = 1.2f;
+    private float moveDuration = .5f;
 
     private bool isPassingVehicle = false;
 

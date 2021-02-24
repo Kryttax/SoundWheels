@@ -88,5 +88,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6580843809019406470, guid: 4492e4a36166d1940ad02f310853a28a,
+        type: 3}
+      propertyPath: volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580843809019406470, guid: 4492e4a36166d1940ad02f310853a28a,
+        type: 3}
+      propertyPath: vehicleName
+      value: Police Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669380199030481081, guid: 4492e4a36166d1940ad02f310853a28a,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c1379153feae7846a62409722d52411, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4492e4a36166d1940ad02f310853a28a, type: 3}

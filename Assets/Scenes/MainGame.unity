@@ -202,8 +202,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 536a1f5d5beffb941a53f24411f4549a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -237,8 +237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 840, y: -459}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 827.2, y: -449.1}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &386822186
 GameObject:
@@ -381,8 +381,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c0b1c25dd4b054469f824491d46ad9d, type: 2}
+  m_sharedMaterial: {fileID: -1875659227654743555, guid: 6c0b1c25dd4b054469f824491d46ad9d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -514,8 +515,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c0b1c25dd4b054469f824491d46ad9d, type: 2}
+  m_sharedMaterial: {fileID: -1875659227654743555, guid: 6c0b1c25dd4b054469f824491d46ad9d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -539,7 +541,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.15
+  m_fontSize: 57.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -862,6 +864,9 @@ MonoBehaviour:
   vehiclesPrefab:
   - {fileID: 7621450866214810199, guid: 2897c72ee1b499c45bc174c8fb0e684f, type: 3}
   - {fileID: 7003243162462032304, guid: b6d16beb8d9818942905987593678d4a, type: 3}
+  - {fileID: 8372494245520139683, guid: 3595cf0b930c2624c942dae921cb097e, type: 3}
+  - {fileID: 4476647886388543575, guid: 2ff5e0b19556db740be0f4a347f46c27, type: 3}
+  - {fileID: 4746279810310529043, guid: f4b6ad13130752a4984440ffe8546f99, type: 3}
   leftPivot: {fileID: 1225028321}
   rightPivot: {fileID: 1610376953}
   centerPivot: {fileID: 1887937288}

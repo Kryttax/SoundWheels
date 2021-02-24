@@ -17,7 +17,8 @@ public class Vehicle : MonoBehaviour
 
     public void PlaySound()
     {
-        vehicleSound.PlayOneShot(vehicleSound.clip, volume);
+        vehicleSound.volume = volume;
+        vehicleSound.Play();
     }
 
     public void ActivateVehicle(bool state)
