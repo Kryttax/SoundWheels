@@ -1,10 +1,10 @@
 {
-    "m_SelectedDeviceId": "HYF0218C07000379",
+    "m_SelectedDeviceId": "R58M62BQT8T",
     "m_SelectedPackage": {
-        "deviceId": "HYF0218C07000379",
+        "deviceId": "R58M62BQT8T",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 25087,
-        "exited": false
+        "processId": 3318,
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -49,6 +49,18 @@
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 25087,
             "exited": false
+        },
+        {
+            "deviceId": "R58M62BQT8T",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 18631,
+            "exited": true
+        },
+        {
+            "deviceId": "R58M62BQT8T",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3318,
+            "exited": true
         }
     ],
     "m_Tags": {

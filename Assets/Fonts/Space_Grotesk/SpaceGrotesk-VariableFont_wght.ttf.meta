@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: daaa55dff722c864cb16295fd885a635
+guid: 25545fa009f2a58409d8190257d93d98
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,10 +8,13 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: KenVector Future
+  fontName: Space Grotesk
   fontNames:
-  - KenVector Future
-  fallbackFontReferences: []
+  - Space Grotesk
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 041b25e127f5c5345ac8231b54a68e1f, type: 3}
+  - {fileID: 12800000, guid: 237becb64a3c0d64096d24d89f54bce0, type: 3}
+  - {fileID: 12800000, guid: b26c6d7822b4c3249b50a4337287c2a7, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

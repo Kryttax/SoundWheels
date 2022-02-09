@@ -18,10 +18,10 @@ public class GameManager : MonoBehaviour
     protected AudioSource globalAudio;
 
     private float globalVolume = 0.5f;
-
     private float moveDuration = .5f;
 
     private bool isPassingVehicle = false;
+    private bool isDarkTheme = false;
 
     private void Awake()
     {
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject newVehicle = Instantiate(vehicle);
             vehicles.Add(newVehicle.GetComponent<Vehicle3D>());
+            newVehicle.GetComponent<Vehicle3D>().GenerateVehicle();
             newVehicle.GetComponent<Vehicle3D>().SetVehicleActive(false);
         }
 
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         centerVehicle(vehicles[currentVehicleIndex]);
         EnableVehicle(vehicles[currentVehicleIndex], true);
+        vehicles[currentVehicleIndex].StartMoving();
     }
 
     public void centerVehicle(Vehicle3D vehicle)
@@ -77,6 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayCurrentSound()
     {
+        vehicles[currentVehicleIndex].ExpandVehicle();
         globalAudio.Play();
     }
 
@@ -140,6 +143,7 @@ public class GameManager : MonoBehaviour
 
         vehicle.transform.position = centerPivot.position;
         EnableVehicle(vehicle, true);
+        vehicle.StartMoving();
         isPassingVehicle = false;
     }
 
@@ -158,7 +162,22 @@ public class GameManager : MonoBehaviour
         }
 
         vehicle.transform.position = targetSide;
+        vehicle.StopMoving();
         EnableVehicle(vehicle, false);
+    }
+
+    public void onChangeTheme()
+    {
+        isDarkTheme = !isDarkTheme;
+
+        if(isDarkTheme)
+        {
+            UIManager.instance.UpdateButtonsToDark();
+        }
+        else
+        {
+            UIManager.instance.UpdateButtonsToWhite();
+        }
     }
 
     public void ExitGame() => Application.Quit();
