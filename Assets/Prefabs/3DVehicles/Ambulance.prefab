@@ -23,6 +23,11 @@ PrefabInstance:
       propertyPath: vehicleName
       value: Ambulance
       objectReference: {fileID: 0}
+    - target: {fileID: 6036917198370607476, guid: fb2040b66c1ecb24f82e970baca3e458,
+        type: 3}
+      propertyPath: vehicleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dbc5b1fe2cb4af64582a3fe6a303fbb7, type: 3}
     - target: {fileID: 6036917198370607479, guid: fb2040b66c1ecb24f82e970baca3e458,
         type: 3}
       propertyPath: m_RootOrder

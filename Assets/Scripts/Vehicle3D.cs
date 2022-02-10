@@ -61,6 +61,7 @@ public class Vehicle3D : MonoBehaviour
         }
     }
 
+
     public void GenerateVehicle()
     {
         gameObject.transform.position = dummyInitialPosition;

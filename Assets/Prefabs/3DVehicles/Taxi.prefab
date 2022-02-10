@@ -27,7 +27,7 @@ PrefabInstance:
         type: 3}
       propertyPath: vehicleSound
       value: 
-      objectReference: {fileID: 8300000, guid: 369f13e5c4396bc4eb0c06d3e851061b, type: 3}
+      objectReference: {fileID: 8300000, guid: 548790d4e2c086945ba5b50bdbf8c258, type: 3}
     - target: {fileID: 6036917198370607479, guid: fb2040b66c1ecb24f82e970baca3e458,
         type: 3}
       propertyPath: m_RootOrder

@@ -8,20 +8,20 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> vehiclesPrefab;
 
-    private List<Vehicle3D> vehicles;
-    private int currentVehicleIndex;
-
     [SerializeField]
     private Transform leftPivot, rightPivot, centerPivot;
 
     [SerializeField]
     protected AudioSource globalAudio;
 
+    [SerializeField]
+    private GameUIManager UIManager;
+
+    private List<Vehicle3D> vehicles;
+    private int currentVehicleIndex;
+    private bool isPassingVehicle = false;
     private float globalVolume = 0.5f;
     private float moveDuration = .5f;
-
-    private bool isPassingVehicle = false;
-    private bool isDarkTheme = false;
 
     private void Awake()
     {
@@ -39,10 +39,14 @@ public class GameManager : MonoBehaviour
         }
 
         globalAudio.volume = globalVolume;
-
         currentVehicleIndex = 0;
 
+        //Generate Level UI
+        UIManager.Init();
         setUpVehicle();
+
+        //After all is loaded, start fading out
+        FadeEffect.instance.FadeOut();
     }
 
     public void setUpVehicle()
@@ -62,6 +66,8 @@ public class GameManager : MonoBehaviour
         PlayCurrentSound();
     }
 
+    public Vehicle3D GetCurrentVehicle() { return vehicles[currentVehicleIndex]; }
+
     public void OnUILoaded()
     {
         SetUpVehicleName(vehicles[currentVehicleIndex]);
@@ -69,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     private void SetUpVehicleName(Vehicle3D vehicle)
     {
-        UIManager.instance.UpdateUI(vehicle.GetVehicleName());
+        GameUIManager.instance.UpdateVehicleName(vehicle.GetVehicleName());
     }
 
     private void EnableVehicle(Vehicle3D vehicle, bool state)
@@ -166,19 +172,5 @@ public class GameManager : MonoBehaviour
         EnableVehicle(vehicle, false);
     }
 
-    public void onChangeTheme()
-    {
-        isDarkTheme = !isDarkTheme;
 
-        if(isDarkTheme)
-        {
-            UIManager.instance.UpdateButtonsToDark();
-        }
-        else
-        {
-            UIManager.instance.UpdateButtonsToWhite();
-        }
-    }
-
-    public void ExitGame() => Application.Quit();
 }
