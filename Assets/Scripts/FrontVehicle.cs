@@ -13,6 +13,9 @@ public class FrontVehicle : MonoBehaviour
     [SerializeField]
     private bool isMainCar = false;
 
+    [SerializeField]
+    private float engineStartTime = 1.0f;
+
     private Vector3 initialPosition;
     private Vector3 initialScale;
     private bool isMoving = false;
@@ -90,7 +93,7 @@ public class FrontVehicle : MonoBehaviour
 
     private IEnumerator GoToDestination()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(engineStartTime);
         yield return MoveToTarget(targetPosition.position, movementDuration);
 
         yield return OnArrival();

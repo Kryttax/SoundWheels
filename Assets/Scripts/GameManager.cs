@@ -33,9 +33,9 @@ public class GameManager : MonoBehaviour
         foreach (GameObject vehicle in vehiclesPrefab)
         {
             GameObject newVehicle = Instantiate(vehicle);
-            vehicles.Add(newVehicle.GetComponent<Vehicle3D>());
             newVehicle.GetComponent<Vehicle3D>().GenerateVehicle();
             newVehicle.GetComponent<Vehicle3D>().SetVehicleActive(false);
+            vehicles.Add(newVehicle.GetComponent<Vehicle3D>());
         }
 
         globalAudio.volume = globalVolume;
@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
             currentVehicleIndex--;
             if (currentVehicleIndex < 0)
                 currentVehicleIndex = vehicles.Count - 1;
-            EnableVehicle(vehicles[currentVehicleIndex], true);
+
             SetUpVehicleName(vehicles[currentVehicleIndex]);
             StartCoroutine(MoveFromSide(vehicles[currentVehicleIndex], leftPivot.position));
         }
@@ -127,7 +127,6 @@ public class GameManager : MonoBehaviour
             if (currentVehicleIndex == vehicles.Count)
                 currentVehicleIndex = 0;
 
-            EnableVehicle(vehicles[currentVehicleIndex], true);
             SetUpVehicleName(vehicles[currentVehicleIndex]);
             StartCoroutine(MoveFromSide(vehicles[currentVehicleIndex], rightPivot.position));
         }
@@ -137,6 +136,9 @@ public class GameManager : MonoBehaviour
     {
         float timeElapsed = 0f;
         float t = 0f;
+        vehicle.transform.position = initSide;
+        yield return null;
+        EnableVehicle(vehicle, true);
         while (timeElapsed < moveDuration)
         {
             t = timeElapsed / moveDuration;

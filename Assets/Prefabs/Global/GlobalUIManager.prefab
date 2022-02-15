@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 663544476956027326}
   - component: {fileID: 663544476956027325}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: GlobalUIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &663544476956027326
 Transform:
@@ -43,10 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93cebd3524b0ba4a80a41356bbbf201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicleName: {fileID: 0}
-  leftButton: {fileID: 0}
-  rightButton: {fileID: 0}
   changeThemeButton: {fileID: 0}
+  backButton: {fileID: 0}
   exitGameButton: {fileID: 0}
   darkColor: {r: 0.08235294, g: 0.1254902, b: 0.16862746, a: 1}
   whiteColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

@@ -99,7 +99,7 @@ public class AnchorGameObject : MonoBehaviour
         currentAnchor = newPos;
         if (!transform.position.Equals(newPos))
         {
-            transform.position = newPos;
+            transform.position += newPos;
         }
     }
 }

@@ -21,13 +21,13 @@ PrefabInstance:
     - target: {fileID: 6036917198370607476, guid: fb2040b66c1ecb24f82e970baca3e458,
         type: 3}
       propertyPath: vehicleName
-      value: Car
+      value: Van
       objectReference: {fileID: 0}
     - target: {fileID: 6036917198370607476, guid: fb2040b66c1ecb24f82e970baca3e458,
         type: 3}
       propertyPath: vehicleSound
       value: 
-      objectReference: {fileID: 8300000, guid: cb8b2f7038ccaee42ba0f8d1a54ce0d8, type: 3}
+      objectReference: {fileID: 8300000, guid: 34fa0edbe3108c74fa9a40613d745748, type: 3}
     - target: {fileID: 6036917198370607479, guid: fb2040b66c1ecb24f82e970baca3e458,
         type: 3}
       propertyPath: m_RootOrder

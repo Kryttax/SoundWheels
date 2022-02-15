@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
+[RequireComponent(typeof(AudioSource))]
 public class MainMenuManager : MonoBehaviour
 {
     public static MainMenuManager instance = null;
@@ -16,6 +18,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private FrontVehicle vehicle;
 
+    [SerializeField]
+    private AudioClip vehicleStartSound;
+
     private void Awake()
     {
         if (instance != null)
@@ -23,13 +28,15 @@ public class MainMenuManager : MonoBehaviour
         instance = this;
         startGameButton.onClick.AddListener(() => { StartVehicle(); });
         creditsButton.onClick.AddListener(() => { StartCoroutine(GlobalUIManager.instance.FadeAndGo(SettingsManager.SCENE_CREDITS)); });
+
+        GetComponent<AudioSource>().clip = vehicleStartSound;
     }
 
     private void StartVehicle()
     {
         startGameButton.onClick.RemoveAllListeners();
-        //FadeEffect.instance.FadeOut(startGameButton.GetComponent<Image>());
         vehicle.OnVehicleStart();
+        GetComponent<AudioSource>().Play();
     }
 
     public void StartGame()

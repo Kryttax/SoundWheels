@@ -13,6 +13,7 @@ public class Vehicle3D : MonoBehaviour
 
     private Vector3 dummyInitialPosition = new Vector3(50, 50);
     private Quaternion initialRotation;
+    bool applyMovement = false;
 
     private void Awake()
     {
@@ -49,14 +50,9 @@ public class Vehicle3D : MonoBehaviour
             // get the distance between the current scale and the end scale
             float distance = Vector3.Distance(transform.localScale, endSize);
 
-            // if the current scale is within 0.1 of the end scale... close enough!
             if (distance <= 0.1)
-            {
-                // now were done
                 done = true;
-            }
 
-            // wait a frame then continue from here
             yield return null;
         }
     }
@@ -84,28 +80,26 @@ public class Vehicle3D : MonoBehaviour
 
     private void ShowVehicle(bool state)
     {
-        GetComponent<AnchorGameObject>().UpdateAnchor();
+        if (state == true)
+            GetComponent<AnchorGameObject>().UpdateAnchor();
         gameObject.transform.rotation = initialRotation;
         gameObject.SetActive(state);
     }
 
     public void StartMoving()
     {
-        StartCoroutine(ContinuousRotation());
+        applyMovement = true;
     }
 
-    IEnumerator ContinuousRotation()
+    private void FixedUpdate()
     {
-        while (true)
-        {
+        if(applyMovement)
             gameObject.transform.RotateAround(transform.position, Vector3.up, 2);
-            yield return new WaitForSeconds(0.01f);
-        }
     }
 
     public void StopMoving()
     {
-        StopCoroutine(ContinuousRotation());
+        applyMovement = false;
     }
 
 
